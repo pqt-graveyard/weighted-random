@@ -9,8 +9,8 @@
   "scripts": {
     "build": "rimraf build && tsc",
     "dev": "rimraf build && tsc --watch",
-    "format": "prettier ./{src,src/__tests__}/*.ts --write",
-    "format:check": "prettier ./{src,src/__tests__}/*.ts --check",
+    "format": "prettier ./{src,src}/*.ts --write",
+    "format:check": "prettier ./{src,src}/*.ts --check",
     "lint": "eslint src --ext=\".ts\"",
     "test": "jest --passWithNoTests"
   },
