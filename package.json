@@ -1,8 +1,7 @@
 {
-  "name": "@pqt/start",
-  "private": true,
+  "name": "@pqt/weighted-random",
   "version": "0.0.0",
-  "description": "Base project template to help with a running start. TypeScript, Prettier, ESLint, Jest (and TS-Jest)",
+  "description": "Choose a random value from a fixed list of choices. Treat some values as more likely than others.",
   "author": "Austin Paquette <austin@paquette.io>",
   "keywords": [],
   "main": "build/index.js",
@@ -13,7 +12,7 @@
     "format": "prettier ./{src,src/__tests__}/*.ts --write",
     "format:check": "prettier ./{src,src/__tests__}/*.ts --check",
     "lint": "eslint src --ext=\".ts\"",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
@@ -30,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pqt/start"
+    "url": "https://github.com/pqt/weighted-random"
   },
   "bugs": {
-    "url": "https://github.com/pqt/start/issues"
+    "url": "https://github.com/pqt/weighted-random/issues"
   },
   "husky": {
     "hooks": {
