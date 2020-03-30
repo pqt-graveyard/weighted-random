@@ -1,6 +1,6 @@
 {
   "name": "@pqt/weighted-random",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Choose a random value from a fixed list of choices. Treat some values as more likely than others.",
   "author": "Austin Paquette <austin@paquette.io>",
   "keywords": [],
