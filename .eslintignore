@@ -1,0 +1,8 @@
+# Ignore everything:
+/*
+
+# Except the source files
+!/src
+
+# Ignore the tests folder again
+src/__tests__

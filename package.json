@@ -1,0 +1,56 @@
+{
+  "name": "@pqt/start",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Base project template to help with a running start. TypeScript, Prettier, ESLint, Jest (and TS-Jest)",
+  "author": "Austin Paquette <austin@paquette.io>",
+  "keywords": [],
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "rimraf build && tsc",
+    "dev": "rimraf build && tsc --watch",
+    "format": "prettier ./{src,src/__tests__}/*.ts --write",
+    "format:check": "prettier ./{src,src/__tests__}/*.ts --check",
+    "lint": "eslint src --ext=\".ts\"",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "prettier": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pqt/start"
+  },
+  "bugs": {
+    "url": "https://github.com/pqt/start/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run format && npm run lint && npm run test"
+    }
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.+(ts|tsx|js)",
+      "**/?(*.)+(spec|test).+(ts|tsx|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
+  "license": "MIT"
+}
